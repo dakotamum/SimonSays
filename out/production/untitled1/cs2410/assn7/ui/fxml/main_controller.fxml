@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="419.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs2410.assn7.ui.controller.MainController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="#56ff1f" height="75.0" layoutX="258.0" layoutY="106.0" onMousePressed="#rect4Clicked" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+            <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="#e8ff1f" height="75.0" layoutX="258.0" layoutY="181.0" onMousePressed="#rect3Clicked" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+            <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="BLUE" height="75.0" layoutX="183.0" layoutY="106.0" onMousePressed="#rectClicked" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+            <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="RED" height="75.0" layoutX="183.0" layoutY="181.0" onMousePressed="#rect2Clicked" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+         </children>
+      </Pane>
+   </center>
+   <bottom>
+      <Label fx:id="gameStatusLabel" text="Turns: 0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </bottom>
+   <top>
+      <MenuBar fx:id="onNewGameMenuItemClicked" prefHeight="29.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Game">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onNewGameMenuItemClicked" text="New" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onAboutItemClicked" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
